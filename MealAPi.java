@@ -1,12 +1,11 @@
-
 interface MealApi {
+
 
 
     @GET("filter.php?")
 
     fun getRecipeByCountryName(@Query("a") countryName : String) : Call<Recipe>
 }
-
     object MealInstance {
 
 
