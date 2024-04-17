@@ -69,5 +69,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun onClickButtonMeal(view: View) {
+
+        val intent = Intent(this, MealCard::class.java)
+        startActivity(intent)
+
+    }
 
 }
