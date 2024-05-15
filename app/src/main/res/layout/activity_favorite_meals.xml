@@ -70,11 +70,13 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
                         android:scrollbars="none"
-                        app:layout_constraintBottom_toBottomOf="@+id/men"
-                        tools:layout_editor_absoluteX="-16dp" />
+                        android:layout_width="418dp"
+                        android:layout_height="600dp"
+                        app:layout_constraintBottom_toTopOf="@+id/men"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/header" />
 
                     <LinearLayout
                         android:id="@+id/men"
