@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDE1D2"
-    tools:context=".FirstActivity">
+    tools:context=".activites.FirstActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.314"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/icon" />
 
     <TextView
         android:id="@+id/textView_title"

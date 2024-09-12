@@ -41,6 +41,7 @@ android {
 
 dependencies {
     implementation ("com.google.android.material:material:1.0.0")
+    implementation("androidx.cardview:cardview:1.0.0")
     val nav_version = ("2.3.5")
     val lifecycleVersion = "2.4.0"
     val room_version = ("2.3.0")
@@ -85,6 +86,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:\$lifecycle_version") // LiveData utilities for Compose
 
     implementation ("com.github.bumptech.glide:glide:4.13.2")
+
+    implementation ("androidx.lifecycle:lifecycle-livedata:2.4.0")
+
 
 
 }

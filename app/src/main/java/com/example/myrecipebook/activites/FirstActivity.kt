@@ -1,15 +1,16 @@
-package com.example.myrecipebook
+package com.example.myrecipebook.activites
 
 import android.animation.ObjectAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Handler
 import android.view.animation.DecelerateInterpolator
 import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
+import com.example.myrecipebook.R
+
 class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +26,9 @@ class FirstActivity : AppCompatActivity() {
 
         val progressBar = findViewById<ProgressBar>(R.id.progressBar2)
 
-        progressBar.progressTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.black))
+        progressBar.progressTintList = ColorStateList.valueOf(ContextCompat.getColor(this,
+            R.color.black
+        ))
         val animation = ObjectAnimator.ofInt(progressBar, "progress", 0, 100)
         animation.duration = 4000 // Продолжительность анимации в миллисекундах
         animation.interpolator = DecelerateInterpolator() // Интерполятор для изменения скорости анимации

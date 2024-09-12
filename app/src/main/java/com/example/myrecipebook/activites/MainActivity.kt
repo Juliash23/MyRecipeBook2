@@ -1,16 +1,23 @@
-package com.example.myrecipebook
+package com.example.myrecipebook.activites
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myrecipebook.AdapterClass
+import com.example.myrecipebook.DataClass
+import com.example.myrecipebook.FavoriteMeals
+import com.example.myrecipebook.MealCard
+import com.example.myrecipebook.R
+import com.example.myrecipebook.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
 
+    private lateinit var binding: ActivityMainBinding
     private lateinit var recyclerView: RecyclerView
     private lateinit var datalist:ArrayList<DataClass>
     lateinit var imageList:Array<Int>
@@ -46,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             "Вегатерианское")
 
         recyclerView = findViewById(R.id.recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager (this)
+        recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
 
         datalist = arrayListOf<DataClass>()
@@ -56,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getData(){
         for (i in imageList.indices){
-            val dataClass =DataClass(imageList[i], titleList[i])
+            val dataClass = DataClass(imageList[i], titleList[i])
             datalist.add(dataClass)
         }
         recyclerView.adapter = AdapterClass(datalist)
@@ -69,5 +76,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun onClickButtonMeal(view: View) {
+
+        val intent = Intent(this, MealCard::class.java)
+        startActivity(intent)
+
+    }
 
 }
